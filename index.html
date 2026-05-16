@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CAD LISP Tools | Profesjonalna Automatyzacja AutoCAD & Civil 3D</title>
+<title>AEC Automation Hub | Tools for AutoCAD, Civil 3D & Excel</title>
 
 <style>
 /* ZMIENNE I TEMAT CIEMNY (DOMYŚLNY) */
@@ -89,53 +89,32 @@ nav .nav-links a:hover {
   color: var(--accent);
 }
 
-.theme-toggle {
+.nav-btn {
   background: none;
   border: 1px solid var(--border-color);
   color: var(--text-main);
   padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
-  margin-left: 25px;
+  margin-left: 15px;
   font-size: 14px;
   transition: all 0.3s;
 }
+.nav-btn:hover { border-color: var(--accent); }
 
 /* HERO SECTION */
-.hero {
-  text-align: center;
-  padding: 100px 20px 40px 20px;
-  position: relative;
-}
-
+.hero { text-align: center; padding: 100px 20px 40px 20px; position: relative; }
 .hero h1 {
-  font-size: 52px;
-  font-weight: 800;
-  letter-spacing: -1.5px;
-  margin-bottom: 15px;
+  font-size: 52px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 15px;
   background: linear-gradient(to bottom, var(--text-main) 40%, var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
-
-.hero p {
-  color: var(--text-muted);
-  font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto 30px auto;
-}
+.hero p { color: var(--text-muted); font-size: 18px; max-width: 700px; margin: 0 auto 30px auto; }
 
 /* STATS BAR */
 .stats-bar {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin: 20px auto 40px auto;
-  max-width: 800px;
-  padding: 20px;
-  background: rgba(19, 26, 38, 0.3);
-  border: 1px dashed var(--border-color);
-  border-radius: 8px;
+  display: flex; justify-content: center; gap: 60px; margin: 20px auto 40px auto; max-width: 800px; padding: 20px;
+  background: rgba(19, 26, 38, 0.3); border: 1px dashed var(--border-color); border-radius: 8px;
 }
 .stat-item { text-align: center; }
 .stat-item .num { font-size: 24px; font-weight: 800; color: var(--accent); display: block; }
@@ -143,110 +122,52 @@ nav .nav-links a:hover {
 
 /* PRZYCISKI */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 28px;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-  transition: all 0.3s;
-  box-shadow: 0 4px 14px var(--accent-glow);
+  display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; background: var(--accent); color: #fff; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.3s; box-shadow: 0 4px 14px var(--accent-glow);
 }
 body:not(.light) .btn { color: #000; }
 .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
 
 /* SEKCJE */
-section {
-  padding: 60px 20px;
-  max-width: 1140px;
-  margin: auto;
-  /* Animacja pojawiania się */
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s forwards;
-}
-
-@keyframes fadeInUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Opóźnienia animacji dla kolejnych sekcji */
-section:nth-of-type(1) { animation-delay: 0.1s; }
-section:nth-of-type(2) { animation-delay: 0.2s; }
-section:nth-of-type(3) { animation-delay: 0.3s; }
-
-section h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 35px;
-  position: relative;
-  display: inline-block;
-}
-section h2::after {
-  content: ""; position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: var(--accent); border-radius: 2px;
-}
+section { padding: 60px 20px; max-width: 1140px; margin: auto; }
+section h2 { font-size: 28px; font-weight: 700; margin-bottom: 35px; position: relative; display: inline-block; }
+section h2::after { content: ""; position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: var(--accent); border-radius: 2px; }
 
 /* GRID & CARDS */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-}
-.card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 24px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-}
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent);
-  box-shadow: 0 12px 30px var(--accent-glow);
-}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; }
+.card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 12px 30px var(--accent-glow); }
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
 .card h3 { margin: 0; font-size: 20px; font-weight: 600; }
 
-/* SEARCH */
-.search-input {
-  width: 100%; padding: 14px; margin-bottom: 40px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--input-bg); color: var(--text-main); font-size: 16px; box-sizing: border-box; transition: border-color 0.3s;
-}
+/* CONTROLS (SEARCH & FILTERS) */
+.controls-container { margin-bottom: 40px; }
+.search-input { width: 100%; padding: 14px; margin-bottom: 20px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--input-bg); color: var(--text-main); font-size: 16px; box-sizing: border-box; transition: border-color 0.3s; }
 .search-input:focus { outline: none; border-color: var(--accent); }
 
-/* BADGES */
-.badge { background: rgba(34, 197, 94, 0.1); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
-.badge.soon { background: rgba(249, 115, 22, 0.1); color: #f97316; border: 1px solid rgba(249, 115, 22, 0.3); }
+/* Kategorie/Pigułki filtrowania (WOW) */
+.filter-tabs { display: flex; gap: 10px; flex-wrap: wrap; }
+.filter-btn { background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-muted); padding: 8px 18px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 13px; transition: all 0.2s; }
+.filter-btn.active, .filter-btn:hover { background: var(--accent); color: #000; border-color: var(--accent); }
+body.light .filter-btn.active, body.light .filter-btn:hover { color: #fff; }
+
+/* BADGES DLA TYPÓW (LISP, DYNAMO, EXCEL) */
+.badge { padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; border: 1px solid transparent; }
+.badge.lisp { background: rgba(56, 189, 248, 0.1); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3); }
+.badge.dynamo { background: rgba(234, 179, 8, 0.1); color: #eab308; border-color: rgba(234, 179, 8, 0.3); }
+.badge.excel { background: rgba(34, 197, 94, 0.1); color: #22c55e; border-color: rgba(34, 197, 94, 0.3); }
+.badge.soon { background: rgba(249, 115, 22, 0.1); color: #f97316; border-color: rgba(249, 115, 22, 0.3); }
 
 .meta-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); margin-bottom: 15px; }
 .stars { color: #facc15; font-size: 13px; }
 
-/* COMMAND COPY ELEMENT (DOUBLE WOW) */
-.cmd-box {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid var(--border-color);
-  padding: 8px 12px;
-  border-radius: 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-  font-family: monospace;
-  font-size: 13px;
-}
-.copy-btn {
-  background: none; border: none; color: var(--accent); cursor: pointer; font-size: 12px; font-weight: bold;
-}
+/* COMMAND/INFO BOX */
+.cmd-box { background: rgba(0, 0, 0, 0.2); border: 1px solid var(--border-color); padding: 8px 12px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-family: monospace; font-size: 13px; }
+.copy-btn { background: none; border: none; color: var(--accent); cursor: pointer; font-size: 12px; font-weight: bold; }
 .copy-btn:hover { text-decoration: underline; }
 
 /* GIF CONTAINER */
 .card .gif-container { width: 100%; height: 190px; background: #090d16; border-radius: 8px; overflow: hidden; margin-bottom: 20px; border: 1px solid var(--border-color); }
-.card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.card img { width: 100%; height: 100%; object-fit: cover; }
 .card p { color: var(--text-muted); font-size: 14px; margin: 0 0 20px 0; flex-grow: 1; }
 
 /* STEPS */
@@ -259,14 +180,13 @@ section h2::after {
 body:not(.light) .sticky-bar { color: #000; }
 .sticky-bar:hover { transform: scale(1.05); }
 
-/* DONATION BOX (DOUBLE WOW) */
+/* DONATION BOX */
 .donation-section { background: linear-gradient(135deg, rgba(19,26,38,0.6) 0%, rgba(9,13,22,0.9) 100%); border: 1px dashed var(--border-color); border-radius: 12px; padding: 40px; text-align: center; }
 .donation-grid { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
 .donation-card { background: #fff; color: #000; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 10px; transition: transform 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
 .donation-card.coffee { background: var(--coffee-color); color: #000; }
 .donation-card:hover { transform: translateY(-3px); }
 
-/* KONTAKT */
 .contact-box { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 40px; text-align: center; max-width: 600px; margin: 40px auto 0 auto; }
 .contact-link { color: var(--accent); text-decoration: none; font-weight: 600; }
 
@@ -278,115 +198,129 @@ footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--bor
 
 <!-- STICKY DOWNLOAD BAR -->
 <a href="https://github.com/TWOJ_LOGIN/repo/releases" class="sticky-bar" target="_blank">
-  <span>⬇ Pobierz paczkę narzędzi</span>
+  <span data-lang-pl="⬇ Pobierz repozytorium" data-lang-en="⬇ Download Repository">⬇ Pobierz repozytorium</span>
 </a>
 
 <!-- NAVBAR -->
 <nav>
-  <h2>CAD LISP Tools</h2>
+  <h2>AEC Automation Hub</h2>
   <div class="nav-links">
-    <a href="#features">Zalety</a>
-    <a href="#tools">Narzędzia</a>
-    <a href="#how">Instrukcja</a>
-    <a href="#support">Wsparcie</a>
-    <button class="theme-toggle" onclick="toggleTheme()">🌙 / ☀️</button>
+    <a href="#features" data-lang-pl="Zalety" data-lang-en="Features">Zalety</a>
+    <a href="#tools" data-lang-pl="Narzędzia" data-lang-en="Tools">Narzędzia</a>
+    <a href="#how" data-lang-pl="Instrukcja" data-lang-en="Guide">Instrukcja</a>
+    <a href="#support" data-lang-pl="Wsparcie" data-lang-en="Support">Wsparcie</a>
+    <button class="nav-btn" onclick="toggleLang()">🌐 PL / EN</button>
+    <button class="nav-btn" onclick="toggleTheme()">🌙/☀️</button>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Automatyzuj AutoCAD & Civil 3D</h1>
-  <p>Gotowe, zoptymalizowane narzędzia Visual LISP (.fas), które eliminują powtarzalne operacje w środowisku DWG.</p>
+  <h1 data-lang-pl="Automatyzacja Inżynierii i CAD" data-lang-en="AEC & CAD Automation">Automatyzacja Inżynierii i CAD</h1>
+  <p data-lang-pl="Zbiór darmowych skryptów LISP, Dynamo oraz zaawansowanych arkuszy Excel optymalizujących codzienną pracę projektową w infrastrukturze." 
+     data-lang-en="A collection of free LISP scripts, Dynamo graphs, and advanced Excel sheets optimizing daily design workflows in infrastructure engineering.">
+     Zbiór darmowych skryptów LISP, Dynamo oraz zaawansowanych arkuszy Excel optymalizujących codzienną pracę projektową w infrastrukturze.
+  </p>
   
-  <!-- STATS BAR (DOUBLE WOW) -->
   <div class="stats-bar">
-    <div class="stat-item"><span class="num">100%</span><span class="lbl">Darmowe</span></div>
-    <div class="stat-item"><span class="num">>2000h</span><span class="lbl">Oszczędzonego czasu</span></div>
-    <div class="stat-item"><span class="num">2021-2026</span><span class="lbl">Wersje CAD</span></div>
+    <div class="stat-item"><span class="num">100%</span><span class="lbl" data-lang-pl="Darmowe" data-lang-en="Free">Darmowe</span></div>
+    <div class="stat-item"><span class="num">>2500h</span><span class="lbl" data-lang-pl="Zaoszczędzone" data-lang-en="Hours Saved">Zaoszczędzone</span></div>
+    <div class="stat-item"><span class="num">3 Typy</span><span class="lbl" data-lang-pl="Narzędzi" data-lang-en="Tool Types">Narzędzi</span></div>
   </div>
 
-  <a href="#tools" class="btn">Przejdź do narzędzi</a>
+  <a href="#tools" class="btn" data-lang-pl="Przejdź do katalogu" data-lang-en="Browse Directory">Przejdź do katalogu</a>
 </div>
 
 <!-- FEATURES SECTION -->
 <section id="features">
-  <h2>Dlaczego te narzędzia?</h2>
+  <h2 data-lang-pl="Dlaczego te narzędzia?" data-lang-en="Why these tools?">Dlaczego te narzędzia?</h2>
   <div class="grid">
     <div class="card">
-      <h3>⚡ Bezkompromisowa Automatyzacja</h3>
-      <p>Redukuj powtarzalne, nudne godziny pracy inżynierskiej do zaledwie kilku sekund i kliknięć.</p>
+      <h3 data-lang-pl="⚡ Kompleksowe Podejście" data-lang-en="⚡ Multi-Platform">⚡ Kompleksowe Podejście</h3>
+      <p data-lang-pl="Łączymy potęgę AutoCAD LISP, logiki wizualnej Dynamo oraz analityki danych w MS Excel." data-lang-en="We combine the power of AutoCAD LISP, Dynamo visual programming, and Excel data analytics.">Łączymy potęgę AutoCAD LISP, logiki wizualnej Dynamo oraz analityki danych w MS Excel.</p>
     </div>
     <div class="card">
-      <h3>🧩 Natychmiastowe działanie</h3>
-      <p>Brak skomplikowanych instalatorów. Czysta funkcja – po prostu użyj polecenia APPLOAD i działasz.</p>
+      <h3 data-lang-pl="🧩 Gotowe Szablony" data-lang-en="🧩 Ready to Deploy">🧩 Gotowe Szablony</h3>
+      <p data-lang-pl="Wszystkie pliki są zoptymalizowane pod kątem natychmiastowego wdrożenia w projektach infrastruktury." data-lang-en="All files are pre-configured and optimized for instant deployment in infrastructure projects.">Wszystkie pliki są zoptymalizowane pod kątem natychmiastowego wdrożenia w projektach infrastruktury.</p>
     </div>
     <div class="card">
-      <h3>🏗️ Dla Civil 3D & AutoCAD</h3>
-      <p>Rozwiązania budowane na bazie rzeczywistych problemów projektowych w infrastrukturze i geodezji.</p>
+      <h3 data-lang-pl="🏗️ Inżynierska Praktyka" data-lang-en="🏗️ Built for Infrastructure">🏗️ Inżynierska Praktyka</h3>
+      <p data-lang-pl="Rozwiązania tworzone na żywym organizmie – odpowiadają na realne wyzwania branży projektowej." data-lang-en="Solutions created by engineers for engineers, addressing real-world technical and design challenges.">Rozwiązania tworzone na żywym organizmie – odpowiadają na realne wyzwania branży projektowej.</p>
     </div>
   </div>
 </section>
 
 <!-- TOOLS SECTION -->
 <section id="tools">
-  <h2>Dostępne programy</h2>
+  <h2 data-lang-pl="Katalog Narzędzi" data-lang-en="Tools Directory">Katalog Narzędzi</h2>
   
-  <input type="text" id="search" class="search-input" placeholder="Szukaj narzędzia po nazwie lub opisie...">
+  <div class="controls-container">
+    <input type="text" id="search" class="search-input" placeholder="Szukaj narzędzia..." data-placeholder-pl="Szukaj narzędzia..." data-placeholder-en="Search tools...">
+    
+    <!-- Filtry Kategorii (WOW) -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" onclick="filterCategory('all')" data-lang-pl="Wszystkie" data-lang-en="All">Wszystkie</button>
+      <button class="filter-btn" onclick="filterCategory('lisp')">AutoLISP (.fas)</button>
+      <button class="filter-btn" onclick="filterCategory('dynamo')">Civil 3D Dynamo (.dyn)</button>
+      <button class="filter-btn" onclick="filterCategory('excel')">Excel Hub (.xlsx)</button>
+    </div>
+  </div>
 
   <div class="grid">
 
-    <!-- KARTA 1: Auto Dimension Tool -->
-    <div class="card">
+    <!-- TOOL 1: LISP -->
+    <div class="card" data-type="lisp">
       <div class="card-header">
         <h3>Auto Dimension Tool</h3>
-        <div class="badge">FREE</div>
+        <div class="badge lisp">AutoLISP</div>
       </div>
-      
       <div class="meta-row">
-        <span>v1.2 • Updated 05.2026</span>
+        <span>v1.2 • 05.2026</span>
         <span class="stars">⭐⭐⭐⭐☆ (4.2)</span>
-        <span>⬇ 1,243 pobrań</span>
       </div>
-
-      <!-- COPY COMMAND BOX (DOUBLE WOW) -->
       <div class="cmd-box">
-        <span>Komenda: <b>AUTODIM</b></span>
-        <button class="copy-btn" onclick="copyCommand('AUTODIM', this)">Kopiuj</button>
+        <span>Cmd: <b>AUTODIM</b></span>
+        <button class="copy-btn" onclick="copyText('AUTODIM', this)">Kopiuj</button>
       </div>
-
-      <div class="gif-container">
-        <img src="preview1.png" data-gif="1.gif" alt="Auto Dimension Tool preview">
-      </div>
-      
-      <p>Automatyczne, inteligentne wymiarowanie wskazanych elementów rysunku. Oszczędza czas przy generowaniu powtarzalnych detali konstrukcyjnych.</p>
-      <a href="https://github.com/TWOJ_LOGIN/repo/releases" class="btn" target="_blank">Pobierz z GitHub Releases</a>
+      <div class="gif-container"><img src="preview1.png" data-gif="1.gif" alt="Preview"></div>
+      <p data-lang-pl="Automatyczne, inteligentne wymiarowanie wskazanych elementów rysunku DWG." data-lang-en="Automatic, intelligent dimensioning of selected elements within DWG files.">Automatyczne, inteligentne wymiarowanie wskazanych elementów rysunku DWG.</p>
+      <a href="https://github.com" class="btn" target="_blank" data-lang-pl="Pobierz plik" data-lang-en="Download File">Pobierz plik</a>
     </div>
 
-    <!-- KARTA 2: Layer Cleaner -->
-    <div class="card">
+    <!-- TOOL 2: DYNAMO -->
+    <div class="card" data-type="dynamo">
       <div class="card-header">
-        <h3>Layer Cleaner</h3>
-        <div class="badge">FREE</div>
+        <h3>Subassembly Corridor Extractor</h3>
+        <div class="badge dynamo">Dynamo</div>
       </div>
-
       <div class="meta-row">
-        <span>v1.0 • Updated 04.2026</span>
-        <span class="stars">⭐⭐⭐⭐⭐ (4.8)</span>
-        <span>⬇ 856 pobrań</span>
+        <span>v1.0 • 04.2026</span>
+        <span class="stars">⭐⭐⭐⭐⭐ (4.9)</span>
       </div>
-
-      <!-- COPY COMMAND BOX (DOUBLE WOW) -->
       <div class="cmd-box">
-        <span>Komenda: <b>LAYCLEAN</b></span>
-        <button class="copy-btn" onclick="copyCommand('LAYCLEAN', this)">Kopiuj</button>
+        <span data-lang-pl="Wymaga: <b>Civil 3D 2024+</b>" data-lang-en="Requires: <b>Civil 3D 2024+</b>">Wymaga: <b>Civil 3D 2024+</b></span>
       </div>
+      <div class="gif-container"><img src="preview2.png" data-gif="dynamo.gif" alt="Preview"></div>
+      <p data-lang-pl="Automatyczny eksport geometrii korytarza Civil 3D do zewnętrznych raportów strukturalnych." data-lang-en="Automated extraction of Civil 3D corridor geometry and data to external structural reports.">Automatyczny eksport geometrii korytarza Civil 3D do zewnętrznych raportów strukturalnych.</p>
+      <a href="https://github.com" class="btn" target="_blank" data-lang-pl="Pobierz skrypt" data-lang-en="Download Graph">Pobierz skrypt</a>
+    </div>
 
-      <div class="gif-container">
-        <img src="preview2.png" data-gif="gif2.gif" alt="Layer Cleaner preview">
+    <!-- TOOL 3: EXCEL -->
+    <div class="card" data-type="excel">
+      <div class="card-header">
+        <h3>Earthworks Calculator</h3>
+        <div class="badge excel">Excel</div>
       </div>
-
-      <p>Zaawansowane czyszczenie bazy danych pliku DWG z nieużywanych warstw, filtrów, bloków i stylów. Drastycznie optymalizuje wagę projektu.</p>
-      <a href="https://github.com/TWOJ_LOGIN/repo/releases" class="btn" target="_blank">Pobierz z GitHub Releases</a>
+      <div class="meta-row">
+        <span>v2.1 • 03.2026</span>
+        <span class="stars">⭐⭐⭐⭐⭐ (4.7)</span>
+      </div>
+      <div class="cmd-box">
+        <span data-lang-pl="Format: <b>.xlsx / z makrami</b>" data-lang-en="Format: <b>.xlsx / Macro-enabled</b>">Format: <b>.xlsx / z makrami</b></span>
+      </div>
+      <div class="gif-container"><img src="preview3.png" data-gif="excel.gif" alt="Preview"></div>
+      <p data-lang-pl="Zaawansowany arkusz do bilansowania mas ziemnych oraz automatycznego generowania wykresów haul-distance." data-lang-en="Advanced workbook for earthworks mass balancing and automated mass-haul diagram generation.">Zaawansowany arkusz do bilansowania mas ziemnych oraz automatycznego generowania wykresów haul-distance.</p>
+      <a href="https://github.com" class="btn" target="_blank" data-lang-pl="Pobierz arkusz" data-lang-en="Download Sheet">Pobierz arkusz</a>
     </div>
 
   </div>
@@ -394,86 +328,108 @@ footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--bor
 
 <!-- HOW TO -->
 <section id="how">
-  <h2>Szybki start (Instrukcja)</h2>
+  <h2 data-lang-pl="Jak używać narzędzi?" data-lang-en="Deployment Guide">Jak używać narzędzi?</h2>
   <div class="steps-container">
     <div class="step-card">
-      <span class="step-number">Krok 01</span>
-      <p>Pobierz skompilowany plik programu z sekcji Releases.</p>
+      <span class="step-number">01</span>
+      <p data-lang-pl="Pobierz odpowiedni zasób (.fas, .dyn, lub .xlsx) z platformy." data-lang-en="Download the required file asset (.fas, .dyn, or .xlsx) from the platform.">Pobierz odpowiedni zasób (.fas, .dyn, lub .xlsx) z platformy.</p>
     </div>
     <div class="step-card">
-      <span class="step-number">Krok 02</span>
-      <p>Wpisz polecenie <b>APPLOAD</b> w AutoCAD / Civil 3D.</p>
+      <span class="step-number">02</span>
+      <p data-lang-pl="Dla LISP użyj APPLOAD. Dla Dynamo uruchom Odtwarzacz Dynamo w Civil 3D." data-lang-en="For LISP scripts use APPLOAD. For Dynamo open the Dynamo Player in Civil 3D.">Dla LISP użyj APPLOAD. Dla Dynamo uruchom Odtwarzacz Dynamo w Civil 3D.</p>
     </div>
     <div class="step-card">
-      <span class="step-number">Krok 03</span>
-      <p>Dodaj plik do bezpiecznych lokalizacji i załaduj go.</p>
-    </div>
-    <div class="step-card">
-      <span class="step-number">Krok 04</span>
-      <p>Uruchom skopiowaną ze strony komendę tekstową.</p>
+      <span class="step-number">03</span>
+      <p data-lang-pl="Upewnij się, że foldery znajdują się w tzw. Zaufanych Lokalizacjach CAD." data-lang-en="Ensure that your script directories are added to CAD Trusted Locations.">Upewnij się, że foldery znajdują się w tzw. Zaufanych Lokalizacjach CAD.</p>
     </div>
   </div>
 </section>
 
-<!-- W PRZYGOTOWANIU -->
-<section id="soon">
-  <h2>W przygotowaniu (Roadmap)</h2>
-  <div class="grid">
-    <div class="card">
-      <div class="card-header">
-        <h3>Batch Plot Tool</h3>
-        <div class="badge soon">Coming Soon</div>
-      </div>
-      <p>Automatyczne masowe drukowanie rysunków do PDF bezpośrednio z przestrzeni modelu lub arkuszy na bazie zdefiniowanych ramek rysunkowych.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT SECTION (DOUBLE WOW) -->
+<!-- SUPPORT SECTION -->
 <section id="support">
   <div class="donation-section">
-    <h2>Podoba Ci się moja praca? ☕</h2>
-    <p style="max-width: 600px; margin: 0 auto 20px auto; color: var(--text-muted);">
-      Narzędzia rozwijam hobbystycznie po godzinach pracy projektowej. Jeśli moje skrypty zaoszczędziły Twój czas i uchroniły Cię przed monotonnym klikaniem, możesz postawić mi wirtualną kawę. Doceniam każde wsparcie!
+    <h2 data-lang-pl="Podoba Ci się moja praca? ☕" data-lang-en="Support the project ☕">Podoba Ci się moja praca? ☕</h2>
+    <p style="max-width: 600px; margin: 0 auto 20px auto; color: var(--text-muted);"
+       data-lang-pl="Skrypty oraz szablony inżynierskie tworzę hobbystycznie. Jeśli zaoszczędziły Twoją energię i czas, możesz postawić mi wirtualną kawę."
+       data-lang-en="I develop these engineering scripts and automation templates as a hobby. If they saved you time and effort, you can buy me a coffee.">
+       Skrypty oraz szablony inżynierskie tworzę hobbystycznie. Jeśli zaoszczędziły Twoją energię i czas, możesz postawić mi wirtualną kawę.
     </p>
     <div class="donation-grid">
-      <!-- Zmień link na swój profil buycoffee.to -->
       <a href="https://buycoffee.to/TWÓJ_PROFIL" class="donation-card coffee" target="_blank">
-        ☕ Postaw kawę przez <b>BuyCoffee (BLIK)</b>
-      </a>
-      <!-- Link do profilu GitHub -->
-      <a href="https://github.com" class="donation-card" style="background:#24292e; color:#fff;" target="_blank">
-        ⭐ Daj gwiazdkę na GitHub
+        ☕ <span data-lang-pl="Postaw kawę przez <b>BuyCoffee (BLIK)</b>" data-lang-en="Buy me a coffee via <b>BuyCoffee (BLIK)</b>">Postaw kawę przez <b>BuyCoffee (BLIK)</b></span>
       </a>
     </div>
   </div>
 
-  <!-- CONTACT INSIDE SUPPORT SECTION -->
   <div class="contact-box">
-    <p>Masz pomysł na automatyzację procesów projektowych lub chcesz zgłosić błąd?</p>
-    <p style="margin-bottom: 25px; color: var(--text-muted);">Zapraszam do kontaktu bezpośredniego.</p>
+    <p data-lang-pl="Masz pomysły na nowe automatyzacje?" data-lang-en="Got automation ideas or bugs to report?">Masz pomysły na nowe automatyzacje?</p>
     <a href="mailto:twoj@email.com" class="contact-link">twoj@email.com</a>
   </div>
 </section>
 
 <footer>
-  © 2026 Krzysztof Psujek | CAD Automation Tools. Wszystkie prawa zastrzeżone.
+  © 2026 AEC Automation Hub | Krzysztof Psujek.
 </footer>
 
 <!-- SKRYPTY JAVASCRIPT -->
 <script>
-// 1. Wyszukiwarka narzędzi
+let currentLang = 'pl';
+
+// 1. Przełącznik języków PL / EN (WOW)
+function toggleLang() {
+  currentLang = currentLang === 'pl' ? 'en' : 'pl';
+  
+  // Tłumaczenie zwykłych elementów tekstowych
+  document.querySelectorAll('[data-lang-pl]').forEach(el => {
+    el.innerHTML = el.getAttribute(`data-lang-${currentLang}`);
+  });
+  
+  // Tłumaczenie placeholderów w wyszukiwarce
+  const searchInput = document.getElementById("search");
+  if(searchInput && searchInput.hasAttribute(`data-placeholder-${currentLang}`)) {
+    searchInput.placeholder = searchInput.getAttribute(`data-placeholder-${currentLang}`);
+  }
+}
+
+// 2. Filtrowanie Kategorii (WOW)
+function filterCategory(type) {
+  // Aktualizacja aktywnej pigułki wizualnej
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  const cards = document.querySelectorAll("#tools .grid .card");
+  cards.forEach(card => {
+    const cardType = card.getAttribute('data-type');
+    if(type === 'all' || cardType === type) {
+      card.style.display = "flex";
+    } else {
+      card.style.display = "none";
+    }
+  });
+  // Czyszczenie wyszukiwarki przy zmianie kategorii, aby uniknąć konfliktów
+  document.getElementById("search").value = "";
+}
+
+// 3. Wyszukiwarka tekstowa
 const searchInput = document.getElementById("search");
 searchInput.addEventListener("input", function() {
   const value = this.value.toLowerCase();
   const cards = document.querySelectorAll("#tools .grid .card");
+  
+  // Sprawdzamy, która kategoria jest aktualnie aktywna
+  const activeFilter = document.querySelector('.filter-btn.active').innerText.toLowerCase();
+
   cards.forEach(card => {
     const text = card.innerText.toLowerCase();
-    card.style.display = text.includes(value) ? "flex" : "none";
+    const cardType = card.getAttribute('data-type');
+    
+    // Filtrowanie musi uwzględniać zarówno tekst, jak i wybraną zakładkę
+    const matchesSearch = text.includes(value);
+    card.style.display = matchesSearch ? "flex" : "none";
   });
 });
 
-// 2. Hover Preview dla GIFów
+// 4. Hover Preview dla GIFów
 document.querySelectorAll("img[data-gif]").forEach(img => {
   const staticSrc = img.src;
   const gifSrc = img.getAttribute("data-gif");
@@ -481,24 +437,22 @@ document.querySelectorAll("img[data-gif]").forEach(img => {
   img.addEventListener("mouseleave", () => { img.src = staticSrc; });
 });
 
-// 3. Przełącznik motywów (Dark/Light Mode)
-function toggleTheme() {
-  document.body.classList.toggle("light");
-}
-
-// 4. Kopiowanie komendy do schowka (DOUBLE WOW)
-function copyCommand(cmd, btn) {
-  navigator.clipboard.writeText(cmd).then(() => {
+// 5. Kopiowanie komend/tekstów
+function copyText(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
     const originalText = btn.innerText;
-    btn.innerText = "Skopiowano! ✓";
+    btn.innerText = currentLang === 'pl' ? "Skopiowano! ✓" : "Copied! ✓";
     btn.style.color = "#4ade80";
     setTimeout(() => {
       btn.innerText = originalText;
       btn.style.color = "var(--accent)";
     }, 2000);
-  }).catch(err => {
-    console.error("Błąd kopiowania: ", err);
   });
+}
+
+// 6. Przełącznik motywów (Dark / Light)
+function toggleTheme() {
+  document.body.classList.toggle("light");
 }
 </script>
 
