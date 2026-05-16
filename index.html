@@ -1,118 +1,187 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>CAD LISP Tools by Krzysztof</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAD LISP Tools</title>
 
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: #1e293b;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 40px;
-    }
+/* NAVBAR */
+nav {
+  background: #020617;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #38bdf8;
-      color: black;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
+nav h2 {
+  margin: 0;
+}
 
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+nav a {
+  color: #38bdf8;
+  text-decoration: none;
+  margin-left: 20px;
+}
 
-    .tools {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #1e293b, #020617);
+}
 
-    .tool {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-    }
+.hero h1 {
+  font-size: 42px;
+}
 
-    img {
-      width: 100%;
-      border-radius: 6px;
-    }
+.hero p {
+  color: #94a3b8;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #020617;
-      font-size: 14px;
-    }
-  </style>
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 24px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTION */
+section {
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* TOOLS GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* BADGE */
+.badge {
+  display: inline-block;
+  background: #22c55e;
+  color: black;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #020617;
+  color: #64748b;
+}
+
+/* HOW TO */
+.steps li {
+  margin-bottom: 10px;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>CAD LISP Tools</h1>
-  <p>Automatyzacja AutoCAD – proste i skuteczne narzędzia</p>
-  <a class="btn" href="#tools">Zobacz narzędzia</a>
-</header>
+<!-- NAVBAR -->
+<nav>
+  <h2>CAD LISP Tools</h2>
+  <div>
+    toolsNarzędzia</a>
+    howJak używać</a>
+    contactKontakt</a>
+  </div>
+</nav>
 
+<!-- HERO -->
+<div class="hero">
+  <h1>Automatyzuj AutoCAD</h1>
+  <p>Zestaw narzędzi LISP zwiększających produktywność</p>
+  toolsZobacz narzędzia</a>
+</div>
+
+<!-- TOOLS -->
 <section id="tools">
   <h2>Narzędzia</h2>
 
-  <div class="tools">
+  <div class="grid">
 
-    <div class="tool">
+    <div class="card">
+      <div class="badge">FREE</div>
       <h3>Auto Dimension Tool</h3>
-      <img src="gif1.gif" alt="demo">
-      <p>Automatyczne wymiarowanie obiektów w kilku kliknięciach.</p>
-      <a class="btn" href="#">Download</a>
+      1.gif">
+      <p>Automatyczne wymiarowanie elementów w jednym kliknięciu.</p>
+      1.lsp" class="btn">Download</a>
     </div>
 
-    <div class="tool">
+    <div class="card">
+      <div class="badge">FREE</div>
       <h3>Layer Cleaner</h3>
-      <img src="gif2.gif" alt="demo">
-      <p>Usuwanie nieużywanych warstw i czyszczenie pliku DWG.</p>
-      <a class="btn" href="#">Download</a>
+      gif2.gif">
+      <p>Czyści nieużywane warstwy i optymalizuje plik DWG.</p>
+      2.lsp" class="btn">Download</a>
     </div>
 
   </div>
 </section>
 
-<section>
+<!-- HOW TO -->
+<section id="how">
   <h2>Jak używać</h2>
-  <ol>
+  <ol class="steps">
     <li>Pobierz plik .lsp</li>
-    <li>Załaduj w AutoCAD (APPLOAD)</li>
+    <li>Uruchom AutoCAD</li>
+    <li>Wpisz APPLOAD</li>
+    <li>Załaduj plik</li>
     <li>Uruchom komendę</li>
   </ol>
 </section>
 
-<section>
-  <h2>Źródła</h2>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Kontakt / Źródła</h2>
   <p>
-    <a class="btn" href="#">GitHub</a>
-    <a class="btn" href="#">Kontakt</a>
+    GitHub</a><br><br>
+    Email: twoj@email.com
   </p>
 </section>
 
 <footer>
-  © 2026 Krzysztof Psujek – CAD Tools
+  © 2026 Krzysztof Psujek | CAD Automation Tools
 </footer>
 
 </body>
